@@ -1,8 +1,8 @@
 ## RMLSTARTC009
 
-**Title**: 
+**Title**: Quoted triples as predicate map
 
-**Description**: 
+**Description**: Test the use quoted triples for generating the predicates, which is not possible
 
 **Error expected?** Yes
 

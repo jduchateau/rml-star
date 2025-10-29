@@ -1,26 +1,10 @@
-## RMLSTARTC010
-
-**Title**: Quoted triples as object without object map
-
-**Description**: Test the use quoted triples for generating the object maps but without defining the object map, which is not possible
-
-**Error expected?** Yes
-
-**Input**
-```
-c1,c2,c3,c4
-a,s,o,z
-```
-
-**Mapping**
-```
-@prefix rml: <http://w3id.org/rml/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rml: <http://w3id.org/rml/> .
 @prefix ex: <http://example/> .
 @prefix : <http://example.org/> .
 @base <http://example.org/> .
 
-:firstTM a rml:AssertedTriplesMap, rml:NonAssertedTriplesMap ;
+:firstTM a rml:AssertedTriplesMap ;
     rml:logicalSource [
         rml:source [ a rml:Source, rml:RelativePathSource;
             rml:path "data.csv";
@@ -31,8 +15,10 @@ a,s,o,z
         rml:template "http://example/{c1}" 
     ];
     rml:predicateObjectMap [
-        rml:predicate ex:p;
         rml:quotedTriplesMap :secondTM ;
+        rml:objectMap [
+            rml:template "http://example/{c4}"
+        ]
     ] .
 
 :secondTM a rml:NonAssertedTriplesMap ;
@@ -51,6 +37,3 @@ a,s,o,z
             rml:template "http://example/{c3}" 
         ]
     ] .
-
-```
-
