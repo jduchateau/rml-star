@@ -32,7 +32,9 @@ a,s,o,z
         rml:template "http://example/{c1}" 
     ];
     rml:predicateObjectMap [
-        rml:quotedTriplesMap :secondTM ;
+        rml:predicateMap [
+            rml:quotedTriplesMap :secondTM 
+        ];
         rml:objectMap [
             rml:template "http://example/{c4}"
         ]
