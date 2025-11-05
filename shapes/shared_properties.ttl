@@ -15,16 +15,7 @@
     sh:targetClass rml:AssertedTriplesMap ;
     sh:targetClass rml:NonAssertedTriplesMap ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:and ( 
-        [
-            sh:path rml:predicateObjectMap ;
-            sh:message """
-            Exactly one Predicate Object Map must be specified in the
-            Triples Map referenced by rml:quotedTriplesMap.
-            """ ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-        ]
+    sh:and (
         [
             sh:message """
             rml:quotedTriplesMap expects either a rml:AssertedTriplesMap 
