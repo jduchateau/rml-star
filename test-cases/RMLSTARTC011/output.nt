@@ -1,0 +1,6 @@
+<http://example.org/b0> <http://example.org/k> <http://example.org/t> .
+<http://example.org/b0> <http://example.org/p> <http://example.org/o> .
+
+_:r <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<( <http://example.org/b0> <http://example.org/k> "t" )>> .
+_:r <http://www.w3.org/1999/02/22-rdf-syntax-ns#reifies> <<( <http://example.org/b0> <http://example.org/p> <http://example.org/o> )>> .
+_:r <http://example.org/accordingTo> "ABC" .
